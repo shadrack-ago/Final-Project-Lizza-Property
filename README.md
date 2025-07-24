@@ -35,4 +35,7 @@ A real estate marketplace for the Kenyan market.
 
 ---
 
+Site deployed at: [http://final-project-lizza-property-7t0x3pj7d-shadrackagos-projects.vercel.app/]
+
+
 For any issues, please contact the maintainer. 
