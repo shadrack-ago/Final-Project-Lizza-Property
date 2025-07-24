@@ -37,5 +37,7 @@ A real estate marketplace for the Kenyan market.
 
 Site deployed at: [http://final-project-lizza-property-7t0x3pj7d-shadrackagos-projects.vercel.app/]
 
+Pitch Deck: [https://gamma.app/docs/Rental-Property-Finder-Web-App-Pitch-Deck-mw1mhocnay8fnel]
+
 
 For any issues, please contact the maintainer. 
