@@ -16,28 +16,11 @@ export const uploadImages = async (req, res, next) => {
       return next(errorHandler(400, 'You can only upload 6 images per listing'));
     }
 
-    const uploadPromises = req.files.map(async (file) => {
+    const uploadPromises = req.files.map((file) => {
       // Check file size (5MB limit)
       if (file.size > 5 * 1024 * 1024) {
         throw new Error('Image size should be less than 5MB');
       }
-
-      // Upload to Cloudinary
-      const result = await cloudinary.uploader.upload_stream(
-        {
-          resource_type: 'image',
-          folder: 'real-estate-listings',
-          transformation: [
-            { width: 1000, height: 1000, crop: 'limit' },
-            { quality: 'auto' }
-          ]
-        },
-        (error, result) => {
-          if (error) throw error;
-          return result;
-        }
-      );
-
       return new Promise((resolve, reject) => {
         const stream = cloudinary.uploader.upload_stream(
           {

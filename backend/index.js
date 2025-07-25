@@ -7,6 +7,7 @@ import listingRouter from './routes/listing.route.js';
 import uploadRouter from './routes/upload.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -19,6 +20,15 @@ mongoose.connect(process.env.MONGO).then(()=>{
 const __dirname = path.resolve();
 
 const app = express();
+
+// CORS setup
+app.use(cors({
+    origin: [
+        'http://localhost:5173', // Vite dev
+        'https://final-project-lizza-property.vercel.app' // Vercel prod
+    ],
+    credentials: true
+}));
 
 app.use(express.json());
 
