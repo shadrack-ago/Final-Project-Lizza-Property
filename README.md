@@ -1,5 +1,5 @@
 # Lizza Properties
-
+ Deployed at (https://final-project-lizza-property.vercel.app/)
 A real estate marketplace for the Kenyan market.
 
 ## Backend Setup
