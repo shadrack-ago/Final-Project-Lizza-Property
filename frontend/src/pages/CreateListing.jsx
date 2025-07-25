@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useSelector } from "react-redux";
 import {useNavigate} from 'react-router-dom';
+import { apiFetch } from '../utils/api'; // Add this import
+
 
 export default function CreateListing () {
 
